@@ -1,0 +1,4 @@
+*.csproj
+Library
+*.sln
+*.userprefs

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43bdd9ca2a0a745d68f87e58cb5fa13f
+TrueTypeFontImporter:
+  serializedVersion: 2
+  fontSize: 50
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 0
+  use2xBehaviour: 0
+  fontNames:
+  - Helvetica Light
+  customCharacters: 
+  fontRenderingMode: 1
+  userData: 
