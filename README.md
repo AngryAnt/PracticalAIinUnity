@@ -14,4 +14,4 @@ Running the slideshow:
 		* Click and drag the canvas to move it around.
 		* Right-click and drag on the canvas horizontally or vertically to change connection orientation.
 
-The presentation was recorded. A link to this recording will be provided here when available.
+The presentation recording is available here: https://www.youtube.com/watch?v=hhByGZZbcOc
