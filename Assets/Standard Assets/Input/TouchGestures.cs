@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-// TODO: Revert workaround when namespaces + default params work again
-using UnityAssets;
-//namespace UnityAssets
-//{
+namespace UnityAssets
+{
 	public enum GestureType
 	{
 		Swipe = 1,
@@ -332,4 +330,4 @@ using UnityAssets;
 			}
 		}
 	}
-//}
+}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityAssets;
 
 
 public class Control : MonoBehaviour
@@ -25,12 +26,14 @@ public class Control : MonoBehaviour
 
 	void Awake ()
 	{
+#if !UNITY_ANDROID
 		int targetLevel = PlayerPrefs.GetInt (kLastLevelPref, -1);
 		if (targetLevel != -1 && targetLevel != Application.loadedLevel)
 		{
 			LoadLevel (targetLevel);
 			return;
 		}
+#endif
 
 		foreach (GameObject item in build)
 		{
@@ -109,8 +112,44 @@ public class Control : MonoBehaviour
 	}
 
 
+#if UNITY_ANDROID
+	const float kControllerPressDelay = 1.0f;
+	float m_LastControllerPress = 0;
+#endif
+
+
 	void Update ()
 	{
+#if UNITY_ANDROID
+		if (Time.time - m_LastControllerPress > kControllerPressDelay)
+		{
+			if (
+				Input.GetAxis ("Joystick Axis 5") < -0.5f ||
+				Input.GetAxis ("Joystick Axis X") < -0.5f ||
+				Input.GetAxis ("Joystick Axis 3") < -0.5f ||
+				Input.GetKey (KeyCode.JoystickButton4)
+			)
+			{
+				m_LastControllerPress = Time.time;
+				Previous ();
+			}
+			else if (
+				Input.GetAxis ("Joystick Axis 5") > 0.5f ||
+				Input.GetAxis ("Joystick Axis X") > 0.5f ||
+				Input.GetAxis ("Joystick Axis 3") > 0.5f ||
+				Input.GetKey (KeyCode.JoystickButton0)
+			)
+			{
+				m_LastControllerPress = Time.time;
+				Next ();
+			}
+			else if (Input.GetKey (KeyCode.JoystickButton5))
+			{
+				m_LastControllerPress = Time.time;
+				Skip ();
+			}
+		}
+#else
 		if (Input.GetButtonDown (kPreviousButtonName))
 		{
 			Previous ();
@@ -126,5 +165,6 @@ public class Control : MonoBehaviour
 				Next ();
 			}
 		}
+#endif
 	}
 }
