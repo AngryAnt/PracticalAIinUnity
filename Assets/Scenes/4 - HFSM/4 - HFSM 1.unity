@@ -172,6 +172,7 @@ Transform:
   m_Children:
   - {fileID: 305807119}
   - {fileID: 1230452290}
+  - {fileID: 1647179797}
   m_Father: {fileID: 0}
 --- !u!1 &93987903
 GameObject:
@@ -198,7 +199,7 @@ GUIText:
   m_GameObject: {fileID: 93987903}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Boom!
+  m_Text: GOTO 1
   m_Anchor: 3
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -490,11 +491,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 7fc0d53990f044c988f8648bab9aedc1, type: 2}
       propertyPath: m_Name
-      value: 3 - Boom!
+      value: 3 - GOTO 1
       objectReference: {fileID: 0}
     - target: {fileID: 13200002, guid: 7fc0d53990f044c988f8648bab9aedc1, type: 2}
       propertyPath: m_Text
-      value: Boom!
+      value: GOTO 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fc0d53990f044c988f8648bab9aedc1, type: 2}
@@ -653,6 +654,70 @@ Prefab:
   m_RootGameObject: {fileID: 90935490}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1647179796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 4c908d6a0e5bd48568536b1fa30e48ec, type: 2}
+  m_PrefabInternal: {fileID: 1469315312}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1647179797}
+  - 132: {fileID: 1647179799}
+  - 114: {fileID: 1647179798}
+  m_Layer: 0
+  m_Name: Scene name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647179797
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 4c908d6a0e5bd48568536b1fa30e48ec, type: 2}
+  m_PrefabInternal: {fileID: 1469315312}
+  m_GameObject: {fileID: 1647179796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 90935492}
+--- !u!114 &1647179798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 4c908d6a0e5bd48568536b1fa30e48ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1469315312}
+  m_GameObject: {fileID: 1647179796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ea099dbb78e45179520e07c87e661d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!132 &1647179799
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200002, guid: 4c908d6a0e5bd48568536b1fa30e48ec,
+    type: 2}
+  m_PrefabInternal: {fileID: 1469315312}
+  m_GameObject: {fileID: 1647179796}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Scene name
+  m_Anchor: 6
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 2164260863
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1001 &1766250038
 Prefab:
   m_ObjectHideFlags: 0
@@ -761,7 +826,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1930434680}
   m_Layer: 0
-  m_Name: 3 - Boom!
+  m_Name: 3 - GOTO 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
